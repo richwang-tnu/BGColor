@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnRed;
+    Button btnRed, btnGreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 View bg = findViewById(android.R.id.content);
                 bg.setBackgroundColor(Color.RED);
+            }
+        });
+
+        btnGreen = findViewById(R.id.btnGreen);
+        btnGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View bg = findViewById(android.R.id.content);
+                bg.setBackgroundColor(Color.GREEN);
             }
         });
     }
